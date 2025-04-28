@@ -72,7 +72,7 @@ def MultilineIncidentTop3Country(request):
     query = '''
     SELECT
         fl.country,
-        strftime('$m', fi.date_time) AS month,
+        strftime('%m', fi.date_time) AS month,
         COUNT(fi.id) AS incident_count
     FROM
         fire_incident fi
